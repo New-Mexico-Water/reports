@@ -1,7 +1,7 @@
 ## Elephant Butte history (1950s-1980s)
 
 Sources read for [reports/history/elephant-butte.md](reports/history/elephant-butte.md), 2026-10-11. Each was opened
-and the passage used was read; the dated events are in `history/elephant-butte/events.yaml`.
+and the passage used was read; the dated events are in [events.yaml](events.yaml).
 
 ### Sullivan 2023 (court declaration)
 
@@ -52,9 +52,44 @@ obligation every year 1968-1984, reducing the debit by about 430,000 acre-feet. 
 *Report of the Rio Grande Compact Commission to the Governors of Colorado, New Mexico and Texas*, annual, 1940-1990 (transmittal
 letters). Colorado State Publications Library, <https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/>.
 
-Year-end accrued debits and credits of Colorado and New Mexico, and some year-end Project storage figures, transcribed into
-`history/elephant-butte/sources/rio_grande_compact_balances.csv` with the report and how each figure was read (OCR of the scan; 1951, 1960,
-1963 and 1981 checked by eye against the page). The reports for 1952-1958 are not in the library's online series.
+Year-end accrued debits and credits of Colorado and New Mexico, and some year-end Project storage figures, read from the
+transmittal letter at the front of each report (OCR of the scanned pages; 1951, 1960, 1963 and 1981 checked by eye against the
+page). The reports for 1952-1958 are not in the library's online series. The figures are not copied into this repository: each
+report we used is linked below, and the report gives the individual figures it relies on, each with its source.
+
+| Report | Figures we read from its transmittal letter |
+|---|---|
+| [1946](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111946internet.pdf) | Colorado's balance at the end of 1946; New Mexico's balance at the end of 1946 |
+| [1947](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111947internet.pdf) | New Mexico's balance at the end of 1947 |
+| [1948](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111948internet.pdf) | Colorado's balance at the end of 1948; New Mexico's balance at the end of 1948 |
+| [1950](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111950internet.pdf) | Colorado's balance at the end of 1949; Colorado's balance at the end of 1950; New Mexico's balance at the end of 1949 |
+| [1951](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111951internet.pdf) | Colorado's balance at the end of 1951; New Mexico's balance at the end of 1950; New Mexico's balance at the end of 1951 |
+| [1959](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111959internet.pdf) | Colorado's balance at the end of 1959; New Mexico's balance at the end of 1959; Project storage at the end of 1959 |
+| [1960](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111960internet.pdf) | Colorado's balance at the end of 1960; New Mexico's balance at the end of 1960; Project storage at the end of 1960 |
+| [1961](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111961internet.pdf) | Colorado's balance at the end of 1961; New Mexico's balance at the end of 1961; Project storage at the end of 1961 |
+| [1962](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111962internet.pdf) | Colorado's balance at the end of 1962; New Mexico's balance at the end of 1962; Project storage at the end of 1962 |
+| [1963](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111963internet.pdf) | Colorado's balance at the end of 1963; New Mexico's balance at the end of 1963; Project storage at the end of 1963 |
+| [1964](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111964internet.pdf) | Colorado's balance at the end of 1964; New Mexico's balance at the end of 1964 |
+| [1965](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111965internet.pdf) | Colorado's balance at the end of 1965; New Mexico's balance at the end of 1965; Project storage at the end of 1965 |
+| [1966](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111966internet.pdf) | Colorado's balance at the end of 1966; New Mexico's balance at the end of 1966 |
+| [1967](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111967internet.pdf) | Colorado's balance at the end of 1967; New Mexico's balance at the end of 1967 |
+| [1968](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111968internet.pdf) | Colorado's balance at the end of 1968; New Mexico's balance at the end of 1968 |
+| [1969](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111969internet.pdf) | Colorado's balance at the end of 1969 |
+| [1970](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111970internet.pdf) | Colorado's balance at the end of 1970; New Mexico's balance at the end of 1970 |
+| [1971](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111971internet.pdf) | New Mexico's balance at the end of 1971 |
+| [1972](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111972internet.pdf) | Colorado's balance at the end of 1972; New Mexico's balance at the end of 1972 |
+| [1973](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111973internet.pdf) | New Mexico's balance at the end of 1973 |
+| [1974](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111974internet.pdf) | Colorado's balance at the end of 1974; New Mexico's balance at the end of 1974 |
+| [1975](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111975internet.pdf) | Colorado's balance at the end of 1975; New Mexico's balance at the end of 1975 |
+| [1976](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111976internet.pdf) | New Mexico's balance at the end of 1976 |
+| [1977](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111977internet.pdf) | Colorado's balance at the end of 1977; New Mexico's balance at the end of 1977 |
+| [1978](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111978internet.pdf) | Colorado's balance at the end of 1978; New Mexico's balance at the end of 1978 |
+| [1979](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111979internet.pdf) | Colorado's balance at the end of 1979; New Mexico's balance at the end of 1979 |
+| [1980](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111980internet.pdf) | Colorado's balance at the end of 1980; New Mexico's balance at the end of 1980 |
+| [1981](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111981internet.pdf) | Colorado's balance at the end of 1981; New Mexico's balance at the end of 1981 |
+| [1982](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111982internet.pdf) | Colorado's balance at the end of 1982; New Mexico's balance at the end of 1982 |
+| [1983](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111983internet.pdf) | Colorado's balance at the end of 1983; New Mexico's balance at the end of 1983 |
+| [1985](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111985internet.pdf) | Colorado's balance at the end of 1985; New Mexico's balance at the end of 1985 |
 
 ### USGS allotments data release
 
@@ -62,7 +97,9 @@ Ritchie, A. B., Hanson, R. T., Galanter, A. E., Boyce, S. E., Damar, N. A., and 
 Allocations.* U.S. Geological Survey data release, <https://doi.org/10.5066/P9J9NYND>.
 
 Rio Grande Project allotment to lands (acre-feet per acre) and diversion allocations by district, 1940-2014, from a Reclamation
-spreadsheet. Copied (rounded) into `history/elephant-butte/sources/rio_grande_project_allotments.csv`. Public domain.
+spreadsheet. Not copied into this repository: `scripts/elephant_butte.py` downloads the file
+([Allotments_and_Allocations.csv](https://www.sciencebase.gov/catalog/file/get/5ba03abbe4b08583a5c279fe?f=__disk__c7%2F38%2F5e%2Fc7385e1833383a14f7cb28a073b80f0f51fc4e3e),
+from the [ScienceBase item](https://www.sciencebase.gov/catalog/item/5ba03abbe4b08583a5c279fe)) to a local folder when it runs.
 
 ### Orvis 1989 (sedimentation survey)
 

@@ -100,9 +100,9 @@ Thousands of acre-feet a year unless stated. Rain is the mean of New Mexico's ei
 ## The Compact accounts
 
 Year-end accrued debits (acre-feet owed; a credit is shown as negative), read from the Compact Commission's annual reports [4]
-(`history/elephant-butte/sources/rio_grande_compact_balances.csv`; reports for 1952-1958 are not online):
+(each year links to the report it was read from; reports for 1952-1958 are not online):
 
-| | 1951 | 1959 | 1963 | 1964 | 1967 | 1968 | 1972 | 1974 | 1979 | 1983 | 1985 |
+| | [1951](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111951internet.pdf) | [1959](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111959internet.pdf) | [1963](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111963internet.pdf) | [1964](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111964internet.pdf) | [1967](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111967internet.pdf) | [1968](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111968internet.pdf) | [1972](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111972internet.pdf) | [1974](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111974internet.pdf) | [1979](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111979internet.pdf) | [1983](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111983internet.pdf) | [1985](https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/rgc111985internet.pdf) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | Colorado | -900 | 513,000 | 734,400 | 810,800 | 944,400 | 923,900 | 766,200 | 737,600 | 699,300 | 621,000 | cancelled |
 | New Mexico | 331,800 | 497,900 | 351,800 | 417,700 | 382,400 | 296,900 | -41,700 | -13,000 | 129,100 | 120,200 | cancelled |
@@ -177,17 +177,19 @@ Texas and New Mexico sued Colorado in 1966 [3].
 
 ## Sources
 
-1. Sullivan, G. K. (2023). Second Declaration, Texas v. New Mexico and Colorado, No. 141 Original, paragraphs 9-12.
-2. Gorbach, C. (1999). History and significance of the Low-Flow Conveyance Channel. NM WRRI conference proceedings.
-3. Vandiver, S. E. (1999). The administration of the Rio Grande Compact in Colorado. NM WRRI conference proceedings.
-4. Rio Grande Compact Commission, annual reports to the Governors, 1944-1990 (transmittal letters, delivery schedules).
-5. Ritchie, A. B., et al. (2018). Allotments and Allocations. USGS data release, doi:10.5066/P9J9NYND.
-6. Orvis, C. J. (1989). Elephant Butte Reservoir 1988 Sedimentation Survey. U.S. Bureau of Reclamation.
-7. U.S. Bureau of Reclamation. San Juan-Chama Project (project page).
-8. U.S. Geological Survey (2003). Water Resources Data, Colorado, 08251500 Rio Grande near Lobatos.
-9. National Park Service. New Mexico: Elephant Butte Powerplant (read by a research agent only).
-10. Autobee, R. (1994). Rio Grande Project. Bureau of Reclamation, Projects and Facilities history.
-11. Gaume, N. (1999). The Rio Grande Compact: It's the Law! New Mexico's obligations and compliance. NM WRRI conference proceedings.
-12. Gahan, A. H. (2013). Middle Rio Grande Project. Bureau of Reclamation, Historic Reclamation Projects.
+1. Sullivan, G. K. (2023). Second Declaration, Texas v. New Mexico and Colorado, No. 141 Original, paragraphs 9-12. <https://ecf.ca8.uscourts.gov/files/smDocuments/Exhibit%20G%2002032023%20Gregory%20Sullivan%20Declaration%20FINAL.pdf>
+2. Gorbach, C. (1999). History and significance of the Low-Flow Conveyance Channel. NM WRRI conference proceedings. <https://nmwrri.nmsu.edu/publications/water-conference-proceedings/wcp-documents/w44/gorbach.pdf>
+3. Vandiver, S. E. (1999). The administration of the Rio Grande Compact in Colorado. NM WRRI conference proceedings. <https://nmwrri.nmsu.edu/publications/water-conference-proceedings/wcp-documents/w44/vandiver.pdf>
+4. Rio Grande Compact Commission, annual reports to the Governors, 1944-1990 (transmittal letters, delivery schedules). <https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/>; each report used is linked in [references.md](references.md)
+5. Ritchie, A. B., et al. (2018). Allotments and Allocations. USGS data release, doi:10.5066/P9J9NYND. <https://www.sciencebase.gov/catalog/item/5ba03abbe4b08583a5c279fe>
+6. Orvis, C. J. (1989). Elephant Butte Reservoir 1988 Sedimentation Survey. U.S. Bureau of Reclamation. <https://www.usbr.gov/tsc/techreferences/reservoir/Elephant%20Butte%20Reservoir%201988%20Sedimentation%20Survey.pdf>
+7. U.S. Bureau of Reclamation. San Juan-Chama Project (project page). <https://www.usbr.gov/projects/index.php?id=521>
+8. U.S. Geological Survey (2003). Water Resources Data, Colorado, 08251500 Rio Grande near Lobatos. <https://pubs.usgs.gov/wdr/wdr-co-03-1/vol1/html/08251500.2003.sw.html>
+9. National Park Service. New Mexico: Elephant Butte Powerplant (read by a research agent only). <https://www.nps.gov/articles/new-mexico-elephant-butte-powerplant.htm>
+10. Autobee, R. (1994). Rio Grande Project. Bureau of Reclamation, Projects and Facilities history. <https://www.usbr.gov/projects/pdf.php?id=179>
+11. Gaume, N. (1999). The Rio Grande Compact: It's the Law! New Mexico's obligations and compliance. NM WRRI conference proceedings. <https://nmwrri.nmsu.edu/publications/water-conference-proceedings/wcp-documents/w44/gaume.pdf>
+12. Gahan, A. H. (2013). Middle Rio Grande Project. Bureau of Reclamation, Historic Reclamation Projects. <https://www.usbr.gov/history/ProjectHistories/Middle%20Rio%20Grande%20Project%20.pdf>
+
+Our own numbers come from the nmwater archive, which keeps each gauge's and division's original source: NOAA nClimDiv climate divisions <https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/>; Elephant Butte storage, Bureau of Reclamation HydroData site 1119 <https://www.usbr.gov/uc/water/hydrodata/>; stream gauges from the U.S. Geological Survey <https://waterdata.usgs.gov/>, Colorado's Division of Water Resources <https://dwr.colorado.gov/> and Reclamation. Full citations, and what each source does and does not say: [references.md](references.md).
 
 Regenerate the numbers: `systemd-run --user --wait --pipe --collect -p MemoryMax=9G uv run python scripts/elephant_butte.py`.

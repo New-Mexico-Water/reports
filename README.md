@@ -10,7 +10,7 @@ sources that were opened and read, checked against the numbers in the nmwater ar
   - `report.md`: the findings, with numbered sources.
   - `references.md`: full citations, and what each source does and does not say.
   - `events.yaml`: dated events, each with its sources. It starts with `# Not yet checked by a reviewer`, and nothing in it is published until a reviewer removes that line.
-  - `sources/`: figures transcribed from documents (with how each was read).
+  - Other people's documents and data are never copied in: they are linked from `references.md`, and a script that needs them downloads them, or reads our transcription of them, from a local folder outside the repository (`~/.cache/nmreports/`).
   - `*.csv`: the per-year tables, written by the feature's script.
 - `scripts/<feature>.py`: rebuilds a feature's tables from the nmwater archive.
 - `nmreports/`: shared checks (water years, volumes, water balance, seasons). Data only; tested in `tests/`.
@@ -27,7 +27,7 @@ Lives beside `nmwater-web` in `~/projects/newmexicowater/`. Depends on the nmwat
 
 - Every claim traces to a named source that was actually opened and read, not a search snippet.
 - Write in our own words, with no long quotations.
-- Never commit papers or PDFs.
+- Never commit other people's documents, data or papers (no PDFs, no copied tables); link to them.
 - Compare eras in acre-feet, not percent full: the reservoir capacity tables changed over time.
 
 ## Reports

@@ -2,7 +2,13 @@
 
     uv run python scripts/elephant_butte.py            # writes history/elephant-butte/elephant-butte.csv and elephant-butte-periods.csv
 
-Reads only the nmwater DuckDB catalog (no network). Run it as a capped unit on this machine (it scans large tables):
+Reads the nmwater DuckDB catalog. Other people's documents and data are never copied into this repository: the Compact Commission's
+year-end balances (our transcription of the scanned reports, each linked in history/elephant-butte/references.md) and the USGS allotments
+data release are kept in a local folder outside it (SOURCES below; the USGS file is downloaded there on first run). With them, the script
+also writes elephant-butte-with-sources.csv to that folder (columns compact_debit_co_af, compact_debit_nm_af, project_storage_dec31_af,
+allotment_ft_per_acre, allocation_total_af); the tables committed here hold only numbers computed from the archive.
+
+Run it as a capped unit on this machine (it scans large tables):
     systemd-run --user --wait --pipe --collect -p MemoryMax=8G uv run python scripts/elephant_butte.py
 
 Columns (water years, October to September, acre-feet unless stated):
@@ -16,8 +22,6 @@ Columns (water years, October to September, acre-feet unless stated):
   caballo_mean_af      Caballo storage (Reclamation 1094); project_mean_af = Elephant Butte + Caballo
   eb_area_acres        mean lake surface area (Reclamation 1119)
   residual_af          eb_change_af - (san_marcial_af - release_af): what the gauges do not account for (mostly evaporation)
-  compact_debit_*_af  Rio Grande Compact accrued debit on 31 December (credit negative), Colorado and New Mexico (history/elephant-butte/sources/)
-  allotment_ft_per_acre, allocation_total_af   Rio Grande Project allotment and diversion allocation (USGS data release, config/history/)
   del_norte_af, conejos_af, lobatos_af, embudo_af, chamita_af   the gauges above Otowi (USGS 08220000, 08246500, 08251500, 08279500, 08290000)
   co_index_af = del_norte + conejos; co_use_af = co_index - lobatos; nm_north_gain_af = embudo - lobatos; espanola_gain_af = otowi - embudo - chamita
   snow_season_*_in    November-April precipitation; monsoon_*_in July-September; melt_season_*_c March-June mean temperature (co_rg, nm_mtn)
@@ -27,6 +31,8 @@ Columns (water years, October to September, acre-feet unless stated):
 
 from __future__ import annotations
 
+import os
+import urllib.request
 from datetime import date
 from pathlib import Path
 
@@ -39,6 +45,10 @@ from nmwater.derived.reservoirs import daily as res_daily, splice
 from nmwater.derived.river_flow import pick_copy, read_daily
 
 OUT = Path(__file__).resolve().parents[1] / "history" / "elephant-butte"
+SOURCES = Path(os.environ.get("NMREPORTS_SOURCES", Path.home() / ".cache" / "nmreports")) / "elephant-butte"
+ALLOTMENTS_URL = ("https://www.sciencebase.gov/catalog/file/get/5ba03abbe4b08583a5c279fe"
+                  "?f=__disk__c7%2F38%2F5e%2Fc7385e1833383a14f7cb28a073b80f0f51fc4e3e")   # USGS data release 10.5066/P9J9NYND, Allotments_and_Allocations.csv
+THIRD_PARTY = ["compact_debit_co_af", "compact_debit_nm_af", "project_storage_dec31_af", "allotment_ft_per_acre", "allocation_total_af"]
 DB = NMWATER_ROOT / "data" / "duckdb" / "nmwater.duckdb"      # the nmwater archive (the nmwater checkout this project depends on)
 START, END = date(1895, 1, 1), date(2025, 9, 30)
 
@@ -118,17 +128,24 @@ def main() -> None:
         one = clim[clim.site_uid == uid][["wy", "precip_in", "pdsi"]].rename(columns={"precip_in": f"precip_{col}_in", "pdsi": f"pdsi_{col}"})
         t = t.merge(one, on="wy", how="left")
 
-    # Source data transcribed or copied into history/elephant-butte/sources/ (see history/elephant-butte/report.md): Compact balances on 31 December, and the
-    # Project's allotment per acre (USGS data release 10.5066/P9J9NYND). Both are calendar years; they are joined to the water year that ends that
-    # September, which is the closest match and is said so in the report.
-    hist = OUT / "sources"
-    cb = pd.read_csv(hist / "rio_grande_compact_balances.csv")
-    signed = cb.assign(v=cb.acre_feet.where(cb.status != "credit", -cb.acre_feet))
-    piv = signed.pivot_table(index="year", columns="account", values="v", aggfunc="first")
-    piv = piv.rename(columns={"Colorado": "compact_debit_co_af", "New Mexico": "compact_debit_nm_af", "Project storage": "project_storage_dec31_af"})
-    t = t.merge(piv.reset_index().rename(columns={"year": "wy"}), on="wy", how="left")
-    al = pd.read_csv(hist / "rio_grande_project_allotments.csv")[["year", "allotment_ft_per_acre", "allocation_total_af"]]
-    t = t.merge(al.rename(columns={"year": "wy"}), on="wy", how="left")
+    # Other people's figures, from the local SOURCES folder only: Compact balances on 31 December (our transcription of the Commission's reports)
+    # and the Project's allotment per acre (USGS data release 10.5066/P9J9NYND). Both are calendar years; they are joined to the water year that
+    # ends that September, which is the closest match and is said so in the report.
+    SOURCES.mkdir(parents=True, exist_ok=True)
+    cb_path, al_path = SOURCES / "compact_balances.csv", SOURCES / "Allotments_and_Allocations.csv"
+    if cb_path.exists():
+        cb = pd.read_csv(cb_path)
+        signed = cb.assign(v=cb.acre_feet.where(cb.status != "credit", -cb.acre_feet))
+        piv = signed.pivot_table(index="year", columns="account", values="v", aggfunc="first")
+        piv = piv.rename(columns={"Colorado": "compact_debit_co_af", "New Mexico": "compact_debit_nm_af", "Project storage": "project_storage_dec31_af"})
+        t = t.merge(piv.reset_index().rename(columns={"year": "wy"}), on="wy", how="left")
+    else:
+        print(f"no {cb_path}: Compact balances left out (transcribe them from the reports linked in references.md)")
+    if not al_path.exists():
+        urllib.request.urlretrieve(ALLOTMENTS_URL, al_path)
+    al = pd.read_csv(al_path).rename(columns={"Year": "wy", "Allotment to Lands": "allotment_ft_per_acre",
+                                              "Diversion Allocation Total": "allocation_total_af"})[["wy", "allotment_ft_per_acre", "allocation_total_af"]]
+    t = t.merge(al, on="wy", how="left")
 
     # Seasons: snow season (November-April) precipitation makes the river; July-September monsoon rain mostly does not. Melt-season temperature.
     for col, uid in (("co_rg", "nclimdiv:div:0505"), ("nm_mtn", "nclimdiv:div:2902")):
@@ -140,14 +157,14 @@ def main() -> None:
 
     t = t[(t.wy >= 1896) & (t.wy <= 2025)].sort_values("wy").reset_index(drop=True)
     OUT.mkdir(parents=True, exist_ok=True)
-    t.round(1).to_csv(OUT / "elephant-butte.csv", index=False)
+    t.round(1).to_csv(SOURCES / "elephant-butte-with-sources.csv", index=False)
+    t.drop(columns=[c for c in THIRD_PARTY if c in t]).round(1).to_csv(OUT / "elephant-butte.csv", index=False)
     cols = ["otowi_af", "san_marcial_af", "valley_loss_af", "release_af", "caballo_release_af", "eb_mean_af", "project_mean_af",
             "eb_area_acres", "residual_af", "precip_nm_in", "pdsi_nm", "precip_nm_mtn_in", "precip_co_rg_in", "pdsi_co_rg",
-            "allotment_ft_per_acre", "allocation_total_af", "compact_debit_co_af", "compact_debit_nm_af",
             "snow_season_co_rg_in", "monsoon_co_rg_in", "melt_season_co_rg_c", "snow_season_nm_mtn_in", "monsoon_nm_mtn_in", "melt_season_nm_mtn_c",
             "del_norte_af", "conejos_af", "co_index_af", "lobatos_af", "co_use_af", "embudo_af", "nm_north_gain_af", "chamita_af", "espanola_gain_af"]
     hc.period_summary(t, PERIODS, cols).round(1).to_csv(OUT / "elephant-butte-periods.csv", index=False)
-    print(f"wrote {OUT / 'elephant-butte.csv'} ({len(t)} water years) and elephant-butte-periods.csv")
+    print(f"wrote {OUT / 'elephant-butte.csv'} ({len(t)} water years), elephant-butte-periods.csv and {SOURCES / 'elephant-butte-with-sources.csv'}")
 
 
 if __name__ == "__main__":

@@ -33,7 +33,7 @@ events:
     features: [elephant_butte, rio-grande]
     text: "New Mexico fell behind on its Compact deliveries to Elephant Butte, building a debit of more than 500,000 acre-feet between 1943 and 1956; by the end of 1951 the debit already exceeded the limit the Compact allows by 131,200 acre-feet."
     sources: [2, 4]
-    checked: compact balances (history/elephant-butte/sources/rio_grande_compact_balances.csv)
+    checked: Compact balances read from the Commission reports for 1950 and 1951 (linked in references.md)
   - date: 1951
     precision: year
     kind: drought
