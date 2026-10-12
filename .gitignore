@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# Papers and source PDFs are never committed: read them from outside the repo and cite them in the report's references.md
+*.pdf

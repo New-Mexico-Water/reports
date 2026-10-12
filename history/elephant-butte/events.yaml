@@ -1,0 +1,188 @@
+# Not yet checked by a reviewer
+#
+# Dated events behind the Elephant Butte record, found for the history report (history/elephant-butte/report.md).
+# Same statement/source format as config/river_context/<slug>.yaml in the nmwater repository, plus per event: date and its precision, kind, the features it touches, and the
+# check in the report that supports it ("archive" = our own data). Nothing reads this file yet; the first line keeps it unpublished until reviewed
+# (nmwater repository, nmwater/derived/river_facts.py UNCHECKED). Every source below was opened and read on 2026-10-11 except where `read_by` says otherwise.
+feature: elephant_butte
+researched: 2026-10-11
+
+events:
+  - date: 1938-02
+    precision: month
+    kind: dam
+    features: [caballo, elephant_butte, rio-grande]
+    text: "Caballo Reservoir, 25 miles below Elephant Butte, began storing water in February 1938; from then on the Rio Grande Project's water was held in two reservoirs, and winter releases from Elephant Butte could be caught at Caballo for the summer."
+    sources: [archive_caballo, 9]
+    checked: archive (first Caballo storage value 1938-02-08)
+  - date: 1938
+    precision: year
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "Colorado, New Mexico and Texas signed the Rio Grande Compact, which sets how much water Colorado must pass at the state line and New Mexico must deliver to Elephant Butte, and keeps a running account of shortfalls (debits) and surpluses (credits)."
+    sources: [1, 4]
+  - date: 1942
+    precision: year
+    kind: flood
+    features: [elephant_butte]
+    text: "Floods in the early 1940s filled Elephant Butte; it would not fill again until 1985."
+    sources: [2]
+  - date: 1943/1956
+    precision: range
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "New Mexico fell behind on its Compact deliveries to Elephant Butte, building a debit of more than 500,000 acre-feet between 1943 and 1956; by the end of 1951 the debit already exceeded the limit the Compact allows by 131,200 acre-feet."
+    sources: [2, 4]
+    checked: compact balances (history/elephant-butte/sources/rio_grande_compact_balances.csv)
+  - date: 1951
+    precision: year
+    kind: drought
+    features: [elephant_butte, rio-grande]
+    text: "In the record dry year of 1951 the head of the reservoir had receded about 40 miles below San Marcial, and the river below the Bosque del Apache had broken into disconnected stretches; losses between San Marcial and the lake were estimated at the time at more than 140,000 acre-feet a year."
+    sources: [2]
+  - date: 1951/1978
+    precision: range
+    kind: drought
+    features: [elephant_butte, rio-grande]
+    text: "Inflow to Elephant Butte at San Marcial averaged 568,000 acre-feet a year in 1951-1978, half the 1,131,000 of 1890-1937; Project storage proved inadequate and farmers drilled supplemental wells, which Reclamation encouraged."
+    sources: [1]
+    checked: archive (our gauges give 565,000 acre-feet for 1951-1978)
+  - date: 1951-10/1959
+    precision: range
+    kind: canal
+    features: [elephant_butte, rio-grande]
+    text: "Reclamation built the Low-Flow Conveyance Channel from San Acacia to the reservoir (work began October 1951, the first part was finished at the end of 1953, the full 70 miles in 1959) to cut the water lost on the way to the lake; in the 1960s and 1970s it carried almost all of the river most of the time and reduced the loss between San Acacia and San Marcial by about 40,000 acre-feet a year."
+    sources: [2]
+  - date: 1952
+    precision: year
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "Colorado delivered about 154,000 acre-feet less than the Compact required in 1952, beginning a run of under-deliveries."
+    sources: [3]
+  - date: 1954-08-06
+    precision: day
+    kind: measurement
+    features: [elephant_butte]
+    text: "Elephant Butte held 9,900 acre-feet on 6 August 1954, the lowest storage in the record."
+    sources: [archive_eb]
+    checked: archive
+  - date: 1966
+    precision: year
+    kind: court
+    features: [elephant_butte, rio-grande]
+    text: "Texas and New Mexico sued Colorado in the U.S. Supreme Court to force it to meet the Compact; in May 1968 the case was continued on condition that Colorado meet its obligation, which it did every year from 1968 through 1984."
+    sources: [3]
+  - date: 1967-12-31
+    precision: day
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "Colorado's Compact debit reached 944,400 acre-feet, its highest."
+    sources: [4]
+    checked: compact balances
+  - date: 1972
+    precision: year
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "New Mexico's Compact debit, which had passed 500,000 acre-feet, was gone by 1972; at the end of 1972 New Mexico was in credit."
+    sources: [2, 4]
+    checked: compact balances
+  - date: 1979
+    precision: year
+    kind: flood
+    features: [elephant_butte, rio-grande]
+    text: "From 1979 the Rio Grande ran much higher than in the 1950s to 1970s."
+    sources: [2]
+    checked: archive (Otowi and San Marcial)
+  - date: 1985-03
+    precision: month
+    kind: canal
+    features: [elephant_butte, rio-grande]
+    text: "Diversions into the Low-Flow Conveyance Channel at San Acacia were suspended in March 1985, after the rising reservoir buried its lower reach in sediment."
+    sources: [2]
+  - date: 1985
+    precision: year
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "Elephant Butte filled and spilled for the first time since 1942; under Article VI of the Compact the spill cancelled all of Colorado's and New Mexico's accrued debits, and the suit against Colorado was dismissed in December 1985."
+    sources: [2, 3, 4]
+    checked: archive (storage above 2.0 million acre-feet in June-July 1985)
+  - date: 1988-02
+    precision: month
+    kind: measurement
+    features: [elephant_butte]
+    text: "A Reclamation survey found 570,000 acre-feet of sediment trapped since 1915 (about 7,800 acre-feet a year) and a capacity of 2,065,010 acre-feet at the top of the full pool."
+    sources: [6]
+  - date: 1971-06-09
+    precision: day
+    kind: dam
+    features: [heron, rio-chama]
+    text: "Heron Dam was completed; it stores only water imported from the San Juan Basin by the San Juan-Chama Project, whose largest contracts are with Albuquerque and the Middle Rio Grande Conservancy District. Elephant Butte is not named among its users."
+    sources: [7]
+  - date: 2026-07-29
+    precision: day
+    kind: measurement
+    features: [elephant_butte]
+    text: "Elephant Butte held 26,732 acre-feet, its lowest since 1956."
+    sources: [archive_eb]
+    checked: archive
+  - date: 1941-06
+    precision: month
+    kind: flood
+    features: [elephant_butte]
+    text: "Water went over Elephant Butte's spillway for the first time in late June 1941; in six months the lake had gone from a near-record low to a record high. (Our storage record peaks on 16 June 1942; sources differ on whether the last spill before 1985 was in 1941 or 1942.)"
+    sources: [10, archive_eb]
+  - date: 1943/1952
+    precision: range
+    kind: drought
+    features: [elephant_butte, rio-grande]
+    text: "A drought with little snow in the Rockies ran from 1943 to 1952, a shortage of over a million acre-feet over nine years; Project farmers drilled about 700 wells and planted crops that need less water."
+    sources: [10]
+  - date: 1947
+    precision: year
+    kind: measurement
+    features: [rio-grande]
+    text: "Reclamation concluded that riparian vegetation, wet sands and the river in the middle valley were losing more than 300,000 acre-feet a year to evapotranspiration."
+    sources: [11]
+  - date: 1951
+    precision: year
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "While the lake held less than 400,000 acre-feet of usable water, storage in upstream reservoirs was increased in April and May 1951, against Article VII of the Compact, as the Compact Commission recorded."
+    sources: [4, 12]
+  - date: 1956
+    precision: year
+    kind: policy
+    features: [rio-grande]
+    text: "The State Engineer ruled that the effect of groundwater pumping on the Rio Grande must be offset by retiring equivalent surface water uses."
+    sources: [11]
+  - date: 1964
+    precision: year
+    kind: compact
+    features: [elephant_butte, rio-grande]
+    text: "Colorado delivered 57,600 acre-feet at the state line, 43% of what the Compact required; its accrued debit reached 810,800 acre-feet."
+    sources: [4]
+    checked: compact balances
+  - date: 1957/1978
+    precision: range
+    kind: drought
+    features: [elephant_butte, rio-grande]
+    text: "Winter precipitation over the Rio Grande's headwaters in Colorado and northern New Mexico was 10-12% below 1916-1950, while summer rain was about the same; the headwaters yielded about 20% less water and the river at Otowi about 30% less."
+    sources: [archive_climate]
+    checked: archive (nClimDiv divisions 0505 and 2902; Del Norte, Conejos, Lobatos, Embudo, Chamita, Otowi)
+
+sources:
+  1: {title: "Second Declaration of Gregory K. Sullivan, P.E., in support of the joint motion for entry of consent decree, Texas v. New Mexico and Colorado, No. 141 Original (paragraphs 9-12)", publisher: "U.S. Supreme Court, Office of the Special Master (court filing)", url: "https://ecf.ca8.uscourts.gov/files/smDocuments/Exhibit%20G%2002032023%20Gregory%20Sullivan%20Declaration%20FINAL.pdf", accessed: 2026-10-11}
+  2: {title: "Gorbach, C. (1999), History and Significance of the Low-Flow Conveyance Channel: What is its Future?", publisher: "New Mexico Water Resources Research Institute, conference proceedings 1999", url: "https://nmwrri.nmsu.edu/publications/water-conference-proceedings/wcp-documents/w44/gorbach.pdf", accessed: 2026-10-11}
+  3: {title: "Vandiver, S. E. (1999), The Administration of the Rio Grande Compact in Colorado", publisher: "New Mexico Water Resources Research Institute, conference proceedings 1999", url: "https://nmwrri.nmsu.edu/publications/water-conference-proceedings/wcp-documents/w44/vandiver.pdf", accessed: 2026-10-11}
+  4: {title: "Reports of the Rio Grande Compact Commission to the Governors, 1944-1990 (transmittal letters)", publisher: "Rio Grande Compact Commission, via the Colorado State Publications Library", url: "https://spl.cde.state.co.us/artemis/rgc_rrcserials/rgc11internet/", accessed: 2026-10-11}
+  5: {title: "Ritchie, A. B., et al. (2018), Allotments and Allocations (Rio Grande Project, 1940-2014)", publisher: "U.S. Geological Survey data release, doi:10.5066/P9J9NYND", url: "https://www.sciencebase.gov/catalog/item/5ba03abbe4b08583a5c279fe", accessed: 2026-10-11}
+  6: {title: "Orvis, C. J. (1989), Elephant Butte Reservoir 1988 Sedimentation Survey", publisher: "U.S. Bureau of Reclamation, Denver Office", url: "https://www.usbr.gov/tsc/techreferences/reservoir/Elephant%20Butte%20Reservoir%201988%20Sedimentation%20Survey.pdf", accessed: 2026-10-11}
+  7: {title: "San Juan-Chama Project", publisher: "U.S. Bureau of Reclamation", url: "https://www.usbr.gov/projects/index.php?id=521", accessed: 2026-10-11}
+  8: {title: "Water Resources Data, Colorado, Water Year 2003, 08251500 Rio Grande near Lobatos, CO", publisher: "U.S. Geological Survey", url: "https://pubs.usgs.gov/wdr/wdr-co-03-1/vol1/html/08251500.2003.sw.html", accessed: 2026-10-11}
+  9: {title: "New Mexico: Elephant Butte Powerplant", publisher: "National Park Service", url: "https://www.nps.gov/articles/new-mexico-elephant-butte-powerplant.htm", accessed: 2026-10-11, read_by: "research agent only; not read by us"}
+  10: {title: "Autobee, R. (1994), Rio Grande Project", publisher: "U.S. Bureau of Reclamation, Projects and Facilities history", url: "https://www.usbr.gov/projects/pdf.php?id=179", accessed: 2026-10-11}
+  11: {title: "Gaume, N. (1999), The Rio Grande Compact: It's the Law! New Mexico's Obligations and Compliance", publisher: "New Mexico Water Resources Research Institute, conference proceedings 1999", url: "https://nmwrri.nmsu.edu/publications/water-conference-proceedings/wcp-documents/w44/gaume.pdf", accessed: 2026-10-11}
+  12: {title: "Gahan, A. H. (2013), Middle Rio Grande Project", publisher: "U.S. Bureau of Reclamation, Historic Reclamation Projects", url: "https://www.usbr.gov/history/ProjectHistories/Middle%20Rio%20Grande%20Project%20.pdf", accessed: 2026-10-11}
+  archive_climate: {title: "NOAA nClimDiv climate divisions and USGS/Colorado DWR/Reclamation stream gauges, in this archive", publisher: "NOAA NCEI; U.S. Geological Survey; Colorado DWR; U.S. Bureau of Reclamation", url: "https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/", accessed: 2026-10-11}
+  archive_eb: {title: "Elephant Butte storage, Bureau of Reclamation HydroData site 1119, in this archive", publisher: "U.S. Bureau of Reclamation", url: "https://www.usbr.gov/uc/water/hydrodata/", accessed: 2026-10-11}
+  archive_caballo: {title: "Caballo storage, Bureau of Reclamation HydroData site 1094, in this archive", publisher: "U.S. Bureau of Reclamation", url: "https://www.usbr.gov/uc/water/hydrodata/", accessed: 2026-10-11}
